@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <script src="script2.js"></script>
+  <!-- <script defer src="script2.js"></script> -->
+  <script src="https://kit.fontawesome.com/8e1a2ccf75.js" crossorigin="anonymous"></script>
+  <title>Language Translator</title>
+</head>
+
+<body>
+  <div class="Main_container flex">
+
+    <div class="TextArea_container flex">
+
+      <div class="Each_textarea_container input_container">
+        <textarea placeholder="Write Something HERE" class="Text_Area" id="From_Text" cols="30" rows="10"></textarea>
+      </div>
+
+
+      <div class="Each_textarea_container response_container">
+        <textarea placeholder="Response HERE" readonly class="Text_Area" id="To_Text" cols="30" rows="10"></textarea>
+        <div class="Loader_window">
+          <div class="Loader_container">
+            <div class="circle" id="circle1"></div>
+            <div class="circle" id="circle2"></div>
+            <div class="circle" id="circle3"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="Console_container flex">
+
+      <div class="Console flex" id="Left_console">
+
+        <div class="Buttons_container flex">
+          <div id="speakbtn_left" class="console_btn">
+            <i class="fa-solid fa-volume-high"></i>
+          </div>
+          <div id="copybtn_left" class="console_btn">
+            <i class="fa-solid fa-copy"></i>
+          </div>
+        </div>
+
+        <select class="dropdown_menu" id="From_Lang">
+          <option value="auto">Auto Detect</option>
+          <!-- <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="ur">Urdu</option> -->
+        </select>
+
+      </div>
+
+      <div class="Console flex" id="Right_console">
+
+        <select class="dropdown_menu" id="To_Lang">
+          <!-- <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="ur">Urdu</option> -->
+        </select>
+
+        <div class="Buttons_container flex">
+          <div id="copybtn_right" class="console_btn">
+            <i class="fa-solid fa-copy"></i>
+          </div>
+          <div id="speakbtn_right" class="console_btn">
+            <i class="fa-solid fa-volume-high"></i>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <input id="Translate_button" type="button" value="Translate">
+
+
+  </div>
+
+  <div class="Alert flex">
+    <div class="Alert_box flex">
+      <div class="Alert_header_container flex">
+        <div class="Alert_icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h2>Something went Wrong!</h2>
+      </div>
+      <div style="text-align: center;" class="Alert_msg">This is an error that occured during execution</div>
+      <input id="Alert_button" type="button" value="Ok">
+    </div>
+  </div>
+</body>
+
+</html>

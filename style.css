@@ -1,0 +1,317 @@
+/* =============== FONT IMPORT =============== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ===========================================
+   =============== GENERAL CSS ===============
+   =========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.Main_container {
+    width: 800px;
+    gap: 10px;
+    flex-direction: column;
+    border: 1px solid #91A3B0;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.13);
+}
+
+.TextArea_container {
+    width: 100%;
+    gap: 10px;
+    height: 250px;
+}
+
+.Text_Area {
+    border: 1px solid #91A3B0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.13);
+    resize: none;
+    outline: none;
+    padding: 10px;
+    width: inherit;
+    color: #808080;
+    font-weight: 500;
+    font-size: 18px;
+    height: inherit;
+}
+
+.Each_textarea_container {
+    width: 100%;
+    height: inherit;
+}
+
+.Loader_window {
+    position: relative;
+    top: -257px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    width: inherit;
+    height: inherit;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.Loader_window::before {
+    content: '';
+    background-color: black;
+    opacity: 0.2;
+    z-index: -1;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.Loader_container {
+    display: flex;
+    gap: 5px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.Text_Area::-webkit-scrollbar {
+    display: none;
+}
+
+.Text_Area::placeholder {
+    color: #afbdc8;
+}
+
+.Console_container {
+    border: 1px solid #91A3B0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.13);
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+}
+
+.Console {
+    width: 50%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.Console:first-child {
+    border-right: 0.5px solid #afbdc8;
+    padding-inline-end: 80px;
+}
+
+.Console:last-child {
+    border-left: 0.5px solid #afbdc8;
+    padding-inline-start: 80px;
+}
+
+.Buttons_container {
+    gap: 6px;
+}
+
+.Buttons_container .console_btn {
+    width: 49px;
+    height: 49px;
+    border-radius: 10px;
+    background-color: #007FFF;
+    border: 2px solid #007FFF;
+    transition: all 0.3s ease-out;
+}
+
+.Buttons_container .console_btn:hover {
+    background-color: white;
+}
+
+.Buttons_container .console_btn:hover.console_btn i {
+    color: #007FFF;
+}
+
+.Console_container .dropdown_menu {
+    cursor: pointer;
+    color: #808080;
+    border: 1px solid #808080;
+    padding: 3px 6px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+}
+
+.console_btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.console_btn i {
+    color: #FFFFFF;
+    font-size: 22px;
+    transition: all 0.3s ease-out;
+}
+
+#Translate_button {
+    cursor: pointer;
+    width: 100%;
+    height: 48px;
+    background-color: #007FFF;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    border: 2px solid #007FFF;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+}
+
+#Translate_button:hover {
+    background-color: white;
+    color: #007FFF;
+}
+
+.Alert_box {
+    background-color: white;
+    width: 400px;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    animation: Alert-Animation 0.3s ease-out 0s 1 normal;
+}
+
+.closing_animation {
+    transform: scale(0.1);
+    transition: all 0.26s ease-out;
+}
+
+@keyframes Alert-Animation {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+
+}
+
+.Alert_box .Alert_icon i {
+    font-size: 28px;
+    color: red;
+}
+
+.Alert_header_container {
+    gap: 10px;
+}
+
+#Alert_button {
+    background-color: #007FFF;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.Alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    justify-content: center;
+}
+
+.Alert::before {
+    content: '';
+    background-color: black;
+    opacity: 0.3;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* ==========================================
+   ============= MEDIA QUERIES ==============
+   ========================================== */
+
+@media only screen and (max-width: 750px) {
+    .Main_container {
+        width: 95vw;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .TextArea_container {
+        flex-direction: column;
+    }
+
+    .Console_container {
+        margin-top: 260px;
+        height: 150px;
+    }
+
+    #Translate_button {
+        height: 70px;
+    }
+
+    .Console:first-child {
+        padding-inline-end: 5px;
+    }
+
+    .Console:last-child {
+        padding-inline-start: 5px;
+    }
+
+    .Buttons_container {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .Console {
+        flex-direction: column;
+    }
+
+    .Console_container {
+        height: 170px;
+    }
+}
