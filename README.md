@@ -13,5 +13,5 @@
   <li><a href="https://detectlanguage.com/">https://detectlanguage.com/</a> For Language detection of input text</li>
 </ul>
 <h3>Website link</h3>
-<a href="language-translation-tool.netlify.app">language-translation-tool.netlify.app</a>
+<a href="https://language-translation-tool.netlify.app">https://language-translation-tool.netlify.app</a>
 
