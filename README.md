@@ -1,0 +1,2 @@
+<h1>Language Translation Tool</h1><br>
+<p>This tool uses third-party API's for its functionality. The user interface contains two text areas, one for input and one for the output. The user needs to type or paste the desired text to be translated and clicks the "Translate Button" for the desired output. This tool also contains "Speaking/Pronounciation of Text" functionality which is made possible using "SpeechSynthesisUtterance API" of Modern Javascript. This helps the user to listen to the input and output text.</p>
